@@ -2,9 +2,9 @@ module ApplicationHelper
 
   def auth_link
     if sign_in?
-      link_to('Выйти', '/sessions', method: :delete)
+      link_to('Выйти', '/sessions', method: :delete, class: 'navbar-brand')
     else
-      link_to('Войти', '/sessions')
+      link_to('Войти', '/sessions', class: 'navbar-brand')
     end
   end
 

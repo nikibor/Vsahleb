@@ -10,15 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171021160547) do
+ActiveRecord::Schema.define(version: 20171021174846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "genres", force: :cascade do |t|
     t.string "name"
+    t.bigint "story_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_genres_on_name", unique: true
+    t.index ["story_id"], name: "index_genres_on_story_id"
   end
 
   create_table "lines", force: :cascade do |t|
@@ -46,6 +49,7 @@ ActiveRecord::Schema.define(version: 20171021160547) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "story_id"
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["story_id"], name: "index_users_on_story_id"
   end
 
