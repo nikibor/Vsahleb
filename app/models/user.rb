@@ -5,7 +5,8 @@
 #  id         :integer          not null, primary key
 #  name       :string
 #  password   :string
-#  city       :string
+#  email      :string
+#  role       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -13,4 +14,6 @@
 class User < ApplicationRecord
   validates :name, presence: true
   validates :password, presence: true
+  validates :email, presence: true
+  validates :role, presence: true
 end
