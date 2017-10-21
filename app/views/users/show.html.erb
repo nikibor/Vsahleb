@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-header">
+    <h3 align="center">Пользователь</h3>
+  </div>
+  <div class="card-body">
+    <p id="notice"><%= notice %></p>
+    <div class="row">
+      <div class="col-md-2">
+        <h5><strong>Имя:</strong></h5>
+      </div>
+        <%= @user.name %>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+          <h5><strong>Пароль:</strong></h5>
+      </div>
+        <%= @user.password %>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <h5><strong>Город:</strong></h5>
+      </div>
+      <%= @user.city %>
+    </div>
+
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Редактировать', edit_user_path(@user) %> |
+    <%= link_to 'Назад', users_path %>
+  </div>
+</div>

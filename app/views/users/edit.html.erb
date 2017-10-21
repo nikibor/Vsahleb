@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header">
+    <h1>Редактирование пользователя</h1>
+  </div>
+  <div class="card-body">
+    <%= render 'form', user: @user %>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Подробнее', @user %> |
+    <%= link_to 'Назад', users_path %>
+  </div>
+</div>
