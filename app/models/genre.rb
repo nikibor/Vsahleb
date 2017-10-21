@@ -9,5 +9,5 @@
 #
 
 class Genre < ApplicationRecord
-  belongs_to :story
+  belongs_to :story, optional: true
 end

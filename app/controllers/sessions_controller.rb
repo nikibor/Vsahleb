@@ -11,7 +11,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session['user_email'] = nil
-    flash[:notice] = 'Вы вышли из системы'
     redirect_to root_url
   end
 
@@ -20,12 +19,11 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: @email)
     if @user
       session['user_email'] = @email
-      flash[:notice] = 'Login'
+      return redirect_to '/admin' if @user.role == :admin
     else
       @name = request.env['omniauth.auth'].info.name
       User.create name: @name, email: @email, role: :author
       session['user_email'] = @email
-      flash[:notice] = 'Create user'
     end
     redirect_to '/'
   end

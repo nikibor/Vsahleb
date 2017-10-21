@@ -11,7 +11,7 @@
 #
 
 class Story < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   has_many :genres
   has_many :lines
 end
