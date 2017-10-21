@@ -8,6 +8,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav class="navbar navbar-toggleable-xl navbar-inverse">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Navbar</a>
+      <%= auth_link %>
+    </div>
+  </nav>
+
   <body>
     <div class="container">
       <%= yield %>
