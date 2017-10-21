@@ -3,13 +3,16 @@ class ApplicationController < ActionController::Base
   # before_action :authorize
   # helper_method :current_user, :sign_in?, :authorize
 
+  def current_user
+    @user = User.last
+  end
   # def current_user
-  #   @user = session[:email]
+  #   @user = sessions[:email]
   #   @current_user ||= @user
   # end
   #
   # def sign_in?
-  #   !session[:current_user_id].nil?
+  #   !sessions[:current_user_id].nil?
   # end
   #
   # def authorize

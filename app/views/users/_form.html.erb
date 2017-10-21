@@ -3,8 +3,6 @@
 
   <div class="form-inputs">
     <%= f.input :name, placeholder: 'place', label: 'Имя' %>
-    <%= f.input :password, label: 'Пароль' %>
-    <%= f.input :password_confirmation, label: 'Повторите пароль' %>
     <%=	f.input :email, label: 'Почтовый адрес' %>
     <%=	f.input :role, collection: %i[author administrator],default: 'Автор', label: 'Роль пользователя' %>
   </div>
