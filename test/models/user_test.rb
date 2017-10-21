@@ -4,11 +4,11 @@
 #
 #  id         :integer          not null, primary key
 #  name       :string
-#  password   :string
 #  email      :string
 #  role       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  story_id   :integer
 #
 
 require 'test_helper'
