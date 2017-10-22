@@ -1,4 +1,4 @@
-User.create! name: 'Nikita Borgolov', email: 'nborgolov96@gmail.com', role: 'admin'
+# User.create! name: 'Nikita Borgolov', email: 'nborgolov96@gmail.com', role: 'admin'
 Genre.create! name: 'Фантастика'
 Genre.create! name: 'Детектив'
 Genre.create! name: 'Меллодрамма'
