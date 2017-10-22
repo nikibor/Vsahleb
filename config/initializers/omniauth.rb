@@ -1,5 +1,5 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :vkontakte, '6193102' , 'HnFwoiQV1h2nCoo7BK2s',
+  provider :vkontakte, '6229627' , 'dIrqmABaIe0Hjvvd8ZmO',
            {
                :scope => 'email',
                :display => 'popup',
