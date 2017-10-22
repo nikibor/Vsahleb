@@ -5,18 +5,20 @@ class StudiosController < ApplicationController
     @stories = Story.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @story = Story.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
-    @story = Story.new(story_params)
+    @title = params[:story][:title]
+    @description = params[:story][:description]
+    @genre = Genre.find(params[:story][:genre])
+
+    @story = Story.new(title: @title, description: @description, genre: @genre)
 
     respond_to do |format|
       if @story.save
@@ -30,8 +32,12 @@ class StudiosController < ApplicationController
   end
 
   def update
+    @title = params[:story][:title]
+    @description = params[:story][:description]
+    @genre = Genre.find(params[:story][:genre])
+
     respond_to do |format|
-      if @story.update(story_params)
+      if @story.update(title: @title, description: @description, genre: @genre)
         format.html { redirect_to @story, notice: 'Story was successfully updated.' }
         format.json { render :show, status: :ok, location: @story }
       else

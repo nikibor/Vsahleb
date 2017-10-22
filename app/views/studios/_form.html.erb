@@ -5,7 +5,8 @@
     <%= f.input :title, placeholder: 'Война и мир', label: 'Название' %>
     <%=	f.input :description, label: 'Описание' %>
 
-    <%=	f.input :genre, collection: genres,default: 'author', label: 'Жанр' %>
+    <!--<%=	f.input :genre, collection: genres, default: 'author', label: 'Жанр' %>-->
+    <%= f.input :genre, :collection => Genre.all, :selected => Genre.first %>
   </div>
 
   <div class="form-actions">

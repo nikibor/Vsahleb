@@ -19,6 +19,13 @@
       <%= @story.description %>
     </div>
 
+    <div class="row">
+      <div class="col-md-2">
+        <h5><strong>Жанр:</strong></h5>
+      </div>
+      <%= @story.genre.name %>
+    </div>
+
   </div>
   <div class="card-footer">
     <%= link_to 'Редактировать', edit_story_path(@story) %> |
