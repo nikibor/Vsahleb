@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :genres
   resources :stories
   resources :studios
+  resources :lines
   resource :sessions, only: %i[show create destroy]
   # get '/auth', to: 'sessions#vk_auth'
   get '/auth/vkontakte/callback', to: 'sessions#confirm'

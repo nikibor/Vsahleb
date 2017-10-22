@@ -2,14 +2,14 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :title, placeholder: 'Война и мир', label: 'Название' %>
-    <%=	f.input :description, label: 'Описание' %>
+    <%= f.input :title, placeholder: 'Война и мир', label: 'Название',required: true %>
+    <%=	f.input :description, label: 'Описание', label: 'Название' ,required: true %>
 
     <!--<%=	f.input :genre, collection: genres, default: 'author', label: 'Жанр' %>-->
-    <%= f.input :genre, :collection => Genre.all, :selected => Genre.first %>
+    <%= f.input :genre, :collection => Genre.all, :selected => Genre.first, label: 'Жанр' %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, 'Сохранить' %>
+    <%= f.button :submit, 'Далее' %>
   </div>
 <% end %>
