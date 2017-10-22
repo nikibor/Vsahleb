@@ -3,7 +3,7 @@
 
   <div class="form-inputs">
     <%= f.input :title, placeholder: 'Война и мир', label: 'Название' %>
-    <%=	f.input :description, label: 'Описание' %>
+    <%=	f.input :description, label: 'Описание', placeholder: 'Введите описание диалога' %>
 
     <%= f.input :genre, :collection => Genre.all, :selected => Genre.first, label: 'Жанр' %>
   </div>
