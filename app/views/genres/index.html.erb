@@ -1,7 +1,10 @@
+<div class="card">
+  <div class="card-header">
 <p id="notice"><%= notice %></p>
 
 <h1>Жанры</h1>
-
+  </div>
+  <div class="card-body">
 <table class="table">
   <thead>
   <tr>
@@ -21,7 +24,8 @@
   <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Добавить жанр', new_genre_path %>
+  </div>
+<div class="card-footer">
+<%= link_to 'Добавить жанр', new_genre_path, class: 'btn btn-success' %>
+</div>
+</div>

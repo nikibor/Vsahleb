@@ -10,6 +10,11 @@
     lines.push line
     @setState lines: lines
 
+  updateLine: (line, data) ->
+    index = @state.lines.indexOf line
+    lines = React.addons.update(@state.lines, { $splice: [[index, 1, data]] })
+    @replaceState lines: lines
+
   deleteLine: (line) ->
     lines = @state.lines.slice()
     index = lines.indexOf line
@@ -31,7 +36,7 @@
             React.DOM.th null, 'Действия'
         React.DOM.tbody null,
           for line in @state.lines
-            React.createElement Line, key: line.id, line: line, handleDeleteLine: @deleteLine
+            React.createElement Line, key: line.id, line: line, handleDeleteLine: @deleteLine, handleEditLine: @updateLine
       React.DOM.hr null
       React.DOM.div
         className: 'lines'
