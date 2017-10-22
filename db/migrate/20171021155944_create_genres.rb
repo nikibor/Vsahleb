@@ -1,11 +1,9 @@
 class CreateGenres < ActiveRecord::Migration[5.1]
   def change
-    create_table :stories do |t|
-      t.string :title
-      t.string :description
+    create_table :genres do |t|
+      t.string :name
 
       t.timestamps
     end
-
   end
 end

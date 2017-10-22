@@ -17,11 +17,9 @@ ActiveRecord::Schema.define(version: 20171021174846) do
 
   create_table "genres", force: :cascade do |t|
     t.string "name"
-    t.bigint "story_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_genres_on_name", unique: true
-    t.index ["story_id"], name: "index_genres_on_story_id"
   end
 
   create_table "lines", force: :cascade do |t|
@@ -36,9 +34,9 @@ ActiveRecord::Schema.define(version: 20171021174846) do
   create_table "stories", force: :cascade do |t|
     t.string "title"
     t.string "description"
+    t.bigint "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "genre_id"
     t.index ["genre_id"], name: "index_stories_on_genre_id"
   end
 
@@ -54,6 +52,5 @@ ActiveRecord::Schema.define(version: 20171021174846) do
   end
 
   add_foreign_key "lines", "stories"
-  add_foreign_key "stories", "genres"
   add_foreign_key "users", "stories"
 end
