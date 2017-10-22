@@ -10,6 +10,8 @@ end
 gem 'annotate'
 gem 'rails', '~> 5.1.4'
 gem 'pg'
+gem 'table_print'
+
 gem 'omniauth'
 gem 'omniauth-vkontakte'
 gem 'puma', '~> 3.7'

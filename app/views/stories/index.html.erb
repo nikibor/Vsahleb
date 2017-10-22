@@ -11,7 +11,7 @@
       <th>Название</th>
       <th>Описание</th>
       <th>Жанр</th>
-      <th colspan="4"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -24,15 +24,20 @@
         <td><%= link_to 'Подробнее', story %></td>
         <td><%= link_to 'Редактировать', edit_story_path(story) %></td>
         <td><%= link_to 'Удалить', story, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
-        <td><%= check_box_tag 'completed', story.id  %></td>
-        <td></td>
       </tr>
     <% end %>
+
   </tbody>
+
 </table>
   </div>
   <div class="card-footer">
-<%= link_to 'Добавить историю', new_story_path, class: 'btn btn-success' %>
-    <button class="btn btn-primary">CSV</button>
+    <%= link_to 'Добавить историю', new_story_path, class: 'btn btn-success' %>
+    <%= link_to 'csv', '/backup.csv', class: 'btn btn-primary' %>
   </div>
 </div>
+<script type="javascript">
+    function save() {
+        alert('qwe');
+    }
+</script>
