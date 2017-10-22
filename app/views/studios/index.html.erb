@@ -18,9 +18,9 @@
         <td><%= story.title %></td>
         <td><%= story.description %></td>
         <td><%= story.genre.name %></td>
-        <td><%= link_to 'Подробнее', story %></td>
-        <td><%= link_to 'Редактировать', edit_story_path(story) %></td>
-        <td><%= link_to 'Удалить', story, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+        <td><%= link_to 'Подробнее', "/studios/#{story.id}" %></td>
+        <td><%= link_to 'Редактировать', "/studios/#{story.id}/edit" %></td>
+        <td><%= link_to 'Удалить', "/studios/#{story.id}", method: :delete, data: { confirm: 'Вы уверены?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'Добавить историю', new_story_path %>
+<%= link_to 'Добавить историю', new_studio_path %>

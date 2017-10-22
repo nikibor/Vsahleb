@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Haml</title>
+    <title>Хакатон</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <nav class="navbar navbar-toggleable-xl navbar-inverse">
-    <div class="container">
-      <a class="navbar-brand" href="/">Главная</a>
-      <a class="navbar-brand" href="#">Творчество</a>
-      <a class="navbar-brand" href="#">Рейтинг авторов</a>
-      <%= auth_link %>
-    </div>
-  </nav>
+
 
   <body>
+    <nav class="navbar navbar-toggleable-xl navbar-inverse">
+      <div class="container">
+        <a class="navbar-brand" href="/">Главная</a>
+        <a class="navbar-brand" href="#">Творчество</a>
+        <a class="navbar-brand" href="#">Рейтинг авторов</a>
+        <%= auth_link %>
+      </div>
+    </nav>
+    <%= flash[:notice] %>
     <div class="container">
       <%= yield %>
     </div>

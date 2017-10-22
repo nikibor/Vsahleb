@@ -1,9 +1,7 @@
 class SessionsController < ApplicationController
 
   skip_before_action :authorize
-  def show
-
-  end
+  def show; end
 
   def create
     redirect_to '/'

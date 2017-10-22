@@ -5,7 +5,6 @@
     <%= f.input :title, placeholder: 'Война и мир', label: 'Название',required: true %>
     <%=	f.input :description, label: 'Описание', label: 'Название' ,required: true %>
 
-    <!--<%=	f.input :genre, collection: genres, default: 'author', label: 'Жанр' %>-->
     <%= f.input :genre, :collection => Genre.all, :selected => Genre.first, label: 'Жанр' %>
   </div>
 

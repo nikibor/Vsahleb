@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
     @user ||= session['user_email']
   end
 
+  def current_project
+    @project ||= session['studio']
+  end
+
   def sign_in?
     !session['user_email'].nil?
   end
