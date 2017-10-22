@@ -22,7 +22,7 @@ class StoriesController < ApplicationController
 
     respond_to do |format|
       if @story.save
-        format.html { redirect_to @story, notice: 'Story was successfully created.' }
+        format.html { redirect_to "/lines", notice: 'Story was successfully created.' }
         format.json { render :show, status: :created, location: @story }
       else
         format.html { render :new }
@@ -38,7 +38,7 @@ class StoriesController < ApplicationController
 
     respond_to do |format|
       if @story.update(title: @title, description: @description, genre: @genre)
-        format.html { redirect_to @story, notice: 'Story was successfully updated.' }
+        format.html { redirect_to '/lines', notice: 'Story was successfully updated.' }
         format.json { render :show, status: :ok, location: @story }
       else
         format.html { render :edit }

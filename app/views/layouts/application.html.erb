@@ -8,17 +8,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-
-
-  <body>
-    <nav class="navbar navbar-toggleable-xl navbar-inverse">
-      <div class="container">
-        <a class="navbar-brand" href="/">Главная</a>
-        <a class="navbar-brand" href="#">Творчество</a>
-        <a class="navbar-brand" href="#">Рейтинг авторов</a>
-        <%= auth_link %>
-      </div>
-    </nav>
+  <body style="background:#7b4397 -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));linear-gradient(to left, #7b4397, #dc2430);">
+  <nav class="navbar navbar-toggleable-xl navbar-inverse">
+    <div class="container">
+      <a class="navbar-brand" href="/">Главная</a>
+      <a class="navbar-brand" href="/admin">Панель администрирования</a>
+      <a class="navbar-brand" href="/users">Пользователи</a>
+      <a class="navbar-brand" href="/stories">Истории</a>
+      <a class="navbar-brand" href="/genres">Жанры</a>
+      <%= auth_link %>
+    </div>
+  </nav>
     <%= flash[:notice] %>
     <div class="container">
       <%= yield %>

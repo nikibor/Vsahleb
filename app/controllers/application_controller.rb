@@ -4,15 +4,15 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :sign_in?, :authorize
 
   def current_user
-    @user ||= session['user_email']
+    @user ||= session[:user_email]
   end
 
   def current_project
-    @project ||= session['studio']
+    @project ||= session[:studio]
   end
 
   def sign_in?
-    !session['user_email'].nil?
+    !session[:user_email].nil?
   end
 
   def authorize

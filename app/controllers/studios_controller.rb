@@ -1,7 +1,8 @@
 class StudiosController < ApplicationController
   before_action :set_story, only: [:show, :edit, :update, :destroy]
-
+  layout 'landing'
   def index
+
     @stories = Story.all
   end
 
@@ -18,8 +19,8 @@ class StudiosController < ApplicationController
     @description = params[:story][:description]
     @genre = Genre.find(params[:story][:genre])
     @story = Story.create(title: @title, description: @description, genre: @genre)
-    session['studio'] = @story.id
-    return redirect_to '/lines'
+    session[:studio] = @story.title
+    redirect_to '/lines'
   end
 
   def update
@@ -27,7 +28,7 @@ class StudiosController < ApplicationController
     @description = params[:story][:description]
     @genre = Genre.find(params[:story][:genre])
     @story.update(title: @title, description: @description, genre: @genre)
-    session['studio'] = @story.id
+    session[:studio] = @story.id
     redirect_to '/lines'
   end
 
