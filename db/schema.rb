@@ -37,7 +37,9 @@ ActiveRecord::Schema.define(version: 20171021174846) do
     t.bigint "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["genre_id"], name: "index_stories_on_genre_id"
+    t.index ["user_id"], name: "index_stories_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,11 +48,9 @@ ActiveRecord::Schema.define(version: 20171021174846) do
     t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "story_id"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["story_id"], name: "index_users_on_story_id"
   end
 
   add_foreign_key "lines", "stories"
-  add_foreign_key "users", "stories"
+  add_foreign_key "stories", "users"
 end

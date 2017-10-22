@@ -4,6 +4,8 @@ class CreateStories < ActiveRecord::Migration[5.1]
       t.string :title
       t.string :description
       t.belongs_to :genre, index: true
+      # t.has_many :users, index: true
+
       t.timestamps
     end
   end

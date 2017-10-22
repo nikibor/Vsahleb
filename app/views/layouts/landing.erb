@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Хакатон</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'landing', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body id="page-top">
+<nav class="navbar navbar-toggleable-xl navbar-inverse">
+  <div class="container">
+    <a class="navbar-brand" href="/">Главная</a>
+    <a class="navbar-brand" href="#">Творчество</a>
+    <a class="navbar-brand" href="#">Рейтинг авторов</a>
+    <%= auth_link %>
+  </div>
+</nav>
+  <%= yield %>
+  <footer>
+    <div class="container">
+      <p>&copy; 2017 Start Bootstrap. All Rights Reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">Terms</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">FAQ</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
