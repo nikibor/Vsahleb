@@ -14,7 +14,7 @@ gem 'table_print'
 
 gem 'omniauth'
 gem 'omniauth-vkontakte'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.3'
 gem 'react-rails'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 # Use SCSS for stylesheets
